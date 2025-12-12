@@ -1,0 +1,3 @@
+[console_scripts]
+bridge = my_robot.bridge:main
+

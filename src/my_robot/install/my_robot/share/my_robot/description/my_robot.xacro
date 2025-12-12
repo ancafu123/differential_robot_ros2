@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="my_robot" >
+
+  <xacro:include filename="$(find my_robot)/description/urdf/robot_diff.urdf"/>
+  <xacro:include filename="$(find my_robot)/description/urdf/lidar.urdf"/>
+  <xacro:include filename="$(find my_robot)/description/urdf/ros2_control.urdf"/>
+
+</robot>
