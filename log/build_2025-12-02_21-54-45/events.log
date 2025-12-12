@@ -1,0 +1,80 @@
+[0.000000] (-) TimerEvent: {}
+[0.001360] (my_robot) JobQueued: {'identifier': 'my_robot', 'dependencies': OrderedDict()}
+[0.001608] (my_robot) JobStarted: {'identifier': 'my_robot'}
+[0.098050] (-) TimerEvent: {}
+[0.198683] (-) TimerEvent: {}
+[0.299377] (-) TimerEvent: {}
+[0.399987] (-) TimerEvent: {}
+[0.500616] (-) TimerEvent: {}
+[0.601228] (-) TimerEvent: {}
+[0.701860] (-) TimerEvent: {}
+[0.802427] (-) TimerEvent: {}
+[0.902981] (-) TimerEvent: {}
+[1.003613] (-) TimerEvent: {}
+[1.104294] (-) TimerEvent: {}
+[1.204937] (-) TimerEvent: {}
+[1.305530] (-) TimerEvent: {}
+[1.406265] (-) TimerEvent: {}
+[1.507072] (-) TimerEvent: {}
+[1.607855] (-) TimerEvent: {}
+[1.708527] (-) TimerEvent: {}
+[1.809180] (-) TimerEvent: {}
+[1.909787] (-) TimerEvent: {}
+[2.010361] (-) TimerEvent: {}
+[2.110991] (-) TimerEvent: {}
+[2.211617] (-) TimerEvent: {}
+[2.312193] (-) TimerEvent: {}
+[2.412749] (-) TimerEvent: {}
+[2.513341] (-) TimerEvent: {}
+[2.613975] (-) TimerEvent: {}
+[2.714565] (-) TimerEvent: {}
+[2.815162] (-) TimerEvent: {}
+[2.915823] (-) TimerEvent: {}
+[3.016425] (-) TimerEvent: {}
+[3.117032] (-) TimerEvent: {}
+[3.217656] (-) TimerEvent: {}
+[3.318437] (-) TimerEvent: {}
+[3.413127] (my_robot) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/my_robot', 'build', '--build-base', '/home/andres/robot_diff/build/my_robot/build', 'install', '--record', '/home/andres/robot_diff/build/my_robot/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/andres/robot_diff/src/my_robot', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'es_CO:es', 'USER': 'andres', 'SSH_CLIENT': '192.168.0.14 63286 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/zenoh_cpp_vendor/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/andres', 'OLDPWD': '/home/andres', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'humble', 'LOGNAME': 'andres', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm', 'XDG_SESSION_ID': '16', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/andres/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'es_CO.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '42', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/andres/robot_diff/build/my_robot', 'SSH_CONNECTION': '192.168.0.14 63286 192.168.0.30 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/andres/robot_diff/build/my_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/andres/robot_diff/install/my_robot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[3.428094] (-) TimerEvent: {}
+[3.529527] (-) TimerEvent: {}
+[3.630144] (-) TimerEvent: {}
+[3.730900] (-) TimerEvent: {}
+[3.831490] (-) TimerEvent: {}
+[3.932074] (-) TimerEvent: {}
+[4.032616] (-) TimerEvent: {}
+[4.133186] (-) TimerEvent: {}
+[4.233811] (-) TimerEvent: {}
+[4.334386] (-) TimerEvent: {}
+[4.434969] (-) TimerEvent: {}
+[4.535579] (-) TimerEvent: {}
+[4.636140] (-) TimerEvent: {}
+[4.736706] (-) TimerEvent: {}
+[4.751838] (my_robot) StdoutLine: {'line': b'running egg_info\n'}
+[4.754602] (my_robot) StdoutLine: {'line': b'writing ../../build/my_robot/my_robot.egg-info/PKG-INFO\n'}
+[4.755790] (my_robot) StdoutLine: {'line': b'writing dependency_links to ../../build/my_robot/my_robot.egg-info/dependency_links.txt\n'}
+[4.756654] (my_robot) StdoutLine: {'line': b'writing entry points to ../../build/my_robot/my_robot.egg-info/entry_points.txt\n'}
+[4.757335] (my_robot) StdoutLine: {'line': b'writing requirements to ../../build/my_robot/my_robot.egg-info/requires.txt\n'}
+[4.757836] (my_robot) StdoutLine: {'line': b'writing top-level names to ../../build/my_robot/my_robot.egg-info/top_level.txt\n'}
+[4.767162] (my_robot) StdoutLine: {'line': b"reading manifest file '../../build/my_robot/my_robot.egg-info/SOURCES.txt'\n"}
+[4.768860] (my_robot) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[4.771857] (my_robot) StdoutLine: {'line': b"writing manifest file '../../build/my_robot/my_robot.egg-info/SOURCES.txt'\n"}
+[4.772458] (my_robot) StdoutLine: {'line': b'running build\n'}
+[4.772900] (my_robot) StdoutLine: {'line': b'running build_py\n'}
+[4.774937] (my_robot) StdoutLine: {'line': b'running install\n'}
+[4.776216] (my_robot) StdoutLine: {'line': b'running install_lib\n'}
+[4.783018] (my_robot) StdoutLine: {'line': b'running install_data\n'}
+[4.784953] (my_robot) StdoutLine: {'line': b'copying config/nav2.yaml -> /home/andres/robot_diff/install/my_robot/share/my_robot/config\n'}
+[4.787097] (my_robot) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.794326] (my_robot) StdoutLine: {'line': b"removing '/home/andres/robot_diff/install/my_robot/lib/python3.10/site-packages/my_robot-0.0.1-py3.10.egg-info' (and everything under it)\n"}
+[4.796016] (my_robot) StdoutLine: {'line': b'Copying ../../build/my_robot/my_robot.egg-info to /home/andres/robot_diff/install/my_robot/lib/python3.10/site-packages/my_robot-0.0.1-py3.10.egg-info\n'}
+[4.800977] (my_robot) StdoutLine: {'line': b'running install_scripts\n'}
+[4.836871] (-) TimerEvent: {}
+[4.880441] (my_robot) StdoutLine: {'line': b'Installing bridge script to /home/andres/robot_diff/install/my_robot/lib/my_robot\n'}
+[4.881323] (my_robot) StdoutLine: {'line': b'Installing pico_bootloader script to /home/andres/robot_diff/install/my_robot/lib/my_robot\n'}
+[4.882156] (my_robot) StdoutLine: {'line': b'Installing teleop_advanced script to /home/andres/robot_diff/install/my_robot/lib/my_robot\n'}
+[4.884028] (my_robot) StdoutLine: {'line': b"writing list of installed files to '/home/andres/robot_diff/build/my_robot/install.log'\n"}
+[4.937170] (-) TimerEvent: {}
+[5.004054] (my_robot) CommandEnded: {'returncode': 0}
+[5.037988] (-) TimerEvent: {}
+[5.053089] (my_robot) JobEnded: {'identifier': 'my_robot', 'rc': 0}
+[5.055793] (-) EventReactorShutdown: {}

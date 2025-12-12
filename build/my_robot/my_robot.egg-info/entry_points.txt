@@ -1,0 +1,5 @@
+[console_scripts]
+bridge = my_robot.bridge:main
+pico_bootloader = my_robot.pico_bootloader:main
+teleop_advanced = my_robot.teleop_advanced:main
+
