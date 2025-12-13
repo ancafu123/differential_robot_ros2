@@ -1,18 +1,15 @@
 # differential_robot_ros2
 Robot autónomo ROS2 Humble, SLAM + Nav2 
 
-[![Lenguaje C++](https://img.shields.io/badge/C++-17-blue)](#)
 [![Lenguaje Python](https://img.shields.io/badge/Python-3.8+-yellow?logo=python)](#)
 [![Sistema Operativo](https://img.shields.io/badge/Ubuntu-22.04-E95420?logo=ubuntu)](#)
 [![ROS2 Humble](https://img.shields.io/badge/ROS2-Humble-22314E?logo=ros)](#)
-[![Gazebo Classic](https://img.shields.io/badge/Gazebo-Classic%2011-orange?logo=gazebo)](#)
 [![CMake](https://img.shields.io/badge/CMake-3.16+-064F8C?logo=cmake)](#)
 [![Colcon](https://img.shields.io/badge/Build-Colcon-22314E)](#)
 [![Nav2](https://img.shields.io/badge/Nav2-Humble-00599C)](#)
 [![SLAM Toolbox](https://img.shields.io/badge/SLAM-Toolbox-green)](#)
 [![Git](https://img.shields.io/badge/Git-2.34+-F05032?logo=git)](#)
 [![VS Code](https://img.shields.io/badge/IDE-VS%20Code-007ACC?logo=visualstudiocode)](#)
-[![Shell](https://img.shields.io/badge/Shell-Bash-4EAA25?logo=gnubash)](#)
 <!-- [![Docker](https://img.shields.io/badge/Container-Docker-2496ED?logo=docker)](#) -->
 <!-- [![Docker Compose](https://img.shields.io/badge/Docker--Compose-Blue?logo=docker)](#) -->
 [![Arquitectura](https://img.shields.io/badge/CPU-x86_64%20%7C%20ARM64-lightgrey?logo=amd)](#)
@@ -52,6 +49,39 @@ El objetivo es lograr navegación básica, lectura de LIDAR, visualización en R
 ├── README.md               # Este documento
 └── package.xml / CMakeLists.txt
 ```
+
+---
+
+## 🌟 Características Principales
+
+<div align="center">
+
+| Feature | Descripción |
+|---------|-------------|
+| 🗺️ **SLAM en Tiempo Real** | Mapeo simultáneo y localización con SLAM Toolbox asíncrono |
+| 🎯 **Navegación Autónoma** | Sistema Nav2 completo con planificación global (NavFn) y local (DWB) |
+| 🚧 **Evitación de Obstáculos** | Detección y evasión en tiempo real con LiDAR 360° RPLidar A1 |
+| 🎮 **Control Teleoperable** | Soporte para Xbox controller y teleop_twist_keyboard durante mapeo |
+| 📊 **Visualización Completa** | RViz2 con costmaps dinámicos, trayectorias planificadas y partículas AMCL |
+| 🤖 **Robot Diferencial 4WD** | Odometría robusta con encoders de 1000 PPR y control skid-steering |
+| 🔧 **Totalmente Configurable** | Parámetros Nav2, AMCL, SLAM y DWB ajustables según aplicación |
+| 💻 **Código Abierto** | Licencia BSD - Libre para uso académico, investigación y comercial |
+
+</div>
+
+### Sistema SLAM
+<div align="center">
+<img src="images/SLAM.png" width="800"/>
+</div>
+
+SLAM Toolbox implementa graph-based SLAM generando mapas 2D en tiempo real. Procesa LiDAR a 5.5 Hz y odometría a 50 Hz con optimización de pose-graph y loop closure.
+
+### Sistema de Navegación
+<div align="center">
+<img src="images/Navigation.png" width="800"/>
+</div>
+
+Nav2 stack integra planificador global NavFn (Dijkstra), controlador local DWB (Dynamic Window Approach), costmaps dinámicos y behaviors de recuperación.
 
 ---
 
