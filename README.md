@@ -22,7 +22,7 @@ Robot autónomo ROS2 Humble, SLAM + Nav2
 
 # Proyecto de Robot Móvil con RPLIDAR y ROS2
 
-Este repositorio documenta el desarrollo completo de un **robot móvil diferencial** basado en **ROS 2 Humble**, equipado con un **RPLIDAR A1/A2**, cámara, sensores adicionales y nodos propios. Incluye la integración de hardware, configuración de drivers, solución de errores comunes, pruebas en RViz2 y todo el proceso de puesta en marcha.
+Este repositorio documenta el desarrollo completo de un **robot móvil diferencial** basado en **ROS 2 Humble**, equipado con un **RPLIDAR A1**. Incluye la integración de hardware, configuración de drivers, pruebas en RViz2 y todo el proceso de puesta en marcha.
 
 ---
 
@@ -31,10 +31,9 @@ Este repositorio documenta el desarrollo completo de un **robot móvil diferenci
 El proyecto consiste en la implementación de un robot móvil que utiliza:
 
 * Raspberry Pi 4
-* RPLIDAR A1/A2/S2
-* Cámara para visión
-* Motores DC o servos de rotación continua
-* ROS2 Humble + Nav2
+* RPLIDAR A1
+* Motores DC con encoder
+* ROS2 Humble + SLAM Toolbox + Nav2
 * Nodo personalizado para movimiento
 * Configuración completa de sensores
 
