@@ -71,7 +71,7 @@ El objetivo es lograr navegación básica, lectura de LIDAR, visualización en R
 
 ### Sistema SLAM
 <div align="center">
-<img src="imgs/10.png" width="800"/>
+<img src="imgs/8.png" width="800"/>
 </div>
 
 SLAM Toolbox implementa graph-based SLAM generando mapas 2D en tiempo real. Procesa LiDAR a 5.5 Hz y odometría a 50 Hz con optimización de pose-graph y loop closure.
@@ -103,32 +103,22 @@ sudo apt install ros-humble-xacro
 
 ---
 
-## 🛠️ 4. Configuración del RPLIDAR
-
-### Verificar puerto:
-
-```
-ls /dev/ttyUSB*
-```
-
-### Dar permisos
-
-```
-sudo chmod 666 /dev/ttyUSB0
-sudo usermod -a -G dialout $USER
-```
-
-(Reiniciar sesión)
-
-### Archivo YAML
-
-```
-serial_port: /dev/ttyUSB0
-serial_baudrate: 115200   # 256000 si es A2/A3/S2
-frame_id: laser
-```
+## 🛠️ 4. Diseño y URDF del robot
 
 ---
+<div align="center">
+<table>
+  <tr>
+    <td><img src="imgs/2.png" width="400"/></td>
+    <td><img src="imgs/6.png" width="400"/></td>
+  </tr>
+  <tr>
+    <td><img src="imgs/3.png" width="400"/></td>
+    <td><img src="imgs/4.png" width="400"/></td>
+  </tr>
+</table>
+</div>
+
 
 ## 🚀 5. Ejecución del nodo RPLIDAR
 
