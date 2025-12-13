@@ -71,17 +71,10 @@ El objetivo es lograr navegación básica, lectura de LIDAR, visualización en R
 
 ### Sistema SLAM
 <div align="center">
-<img src="images/SLAM.png" width="800"/>
+<img src="imgs/10.png" width="800"/>
 </div>
 
 SLAM Toolbox implementa graph-based SLAM generando mapas 2D en tiempo real. Procesa LiDAR a 5.5 Hz y odometría a 50 Hz con optimización de pose-graph y loop closure.
-
-### Sistema de Navegación
-<div align="center">
-<img src="images/Navigation.png" width="800"/>
-</div>
-
-Nav2 stack integra planificador global NavFn (Dijkstra), controlador local DWB (Dynamic Window Approach), costmaps dinámicos y behaviors de recuperación.
 
 ---
 
