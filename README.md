@@ -45,7 +45,6 @@ El objetivo es lograr navegación básica, lectura de LIDAR, visualización en R
 ├── config/                 # Archivos YAML de parámetros
 ├── src/                    # Nodos personalizados
 ├── urdf/                   # Modelos del robot
-├── scripts/                # Scripts auxiliares
 ├── README.md               # Este documento
 └── package.xml / CMakeLists.txt
 ```
@@ -60,10 +59,9 @@ El objetivo es lograr navegación básica, lectura de LIDAR, visualización en R
 |---------|-------------|
 | 🗺️ **SLAM en Tiempo Real** | Mapeo simultáneo y localización con SLAM Toolbox asíncrono |
 | 🎯 **Navegación Autónoma** | Sistema Nav2 completo con planificación global (NavFn) y local (DWB) |
-| 🚧 **Evitación de Obstáculos** | Detección y evasión en tiempo real con LiDAR 360° RPLidar A1 |
 | 🎮 **Control Teleoperable** | Soporte para Xbox controller y teleop_twist_keyboard durante mapeo |
 | 📊 **Visualización Completa** | RViz2 con costmaps dinámicos, trayectorias planificadas y partículas AMCL |
-| 🤖 **Robot Diferencial 4WD** | Odometría robusta con encoders de 1000 PPR y control skid-steering |
+| 🤖 **Robot Diferencial ** | Odometría robusta con encoders de 620 PPR |
 | 🔧 **Totalmente Configurable** | Parámetros Nav2, AMCL, SLAM y DWB ajustables según aplicación |
 | 💻 **Código Abierto** | Licencia BSD - Libre para uso académico, investigación y comercial |
 
@@ -93,12 +91,17 @@ sudo apt install ros-humble-desktop
 ```
 sudo apt install ros-humble-rplidar-ros
 ```
-
-### Dependencias adicionales
+#### Instalación de dependencias principales
 
 ```
-sudo apt install python3-colcon-common-extensions
-sudo apt install ros-humble-xacro
+sudo apt install -y \
+ros-humble-slam-toolbox \
+ros-humble-amcl \
+ros-humble-nav2-bringup \
+ros-humble-rplidar-ros \
+ros-humble-teleop-twist-keyboard \
+ros-humble-xacro \
+ros-humble-rviz2
 ```
 
 ---
@@ -212,39 +215,7 @@ ros2 launch nav2_bringup navigation_launch.py
 
 ---
 
-## 🔧 9. Instalación y Uso
-
-#### Instalación de dependencias principales
-
-```md
-sudo apt install -y \
-ros-humble-slam-toolbox \
-ros-humble-amcl \
-ros-humble-nav2-bringup \
-ros-humble-rplidar-ros \
-ros-humble-teleop-twist-keyboard \
-ros-humble-xacro \
-ros-humble-rviz2
-```
-
-### 1️⃣ Clonar el repositorio
-```md
-git clone https://github.com/Rubiores/MyWork_UbuntuRos2.git
-```
-### 2️⃣ Compilar el workspace
-```md
-cd ~/MyWork_UbuntuRos2
-colcon build
-source install/setup.bash
-```
-### 3️⃣ Ejecutar SLAM o Localización
-
-```md
-ros2 launch robot_nav slam_launch.py
-ros2 launch robot_nav localization_launch.py
-```
-
-## 🧪 10. Pruebas realizadas
+## 🧪 9. Pruebas realizadas
 
 * Prueba de lectura continua del LIDAR
 * Publicación de /scan en ROS2
@@ -254,7 +225,7 @@ ros2 launch robot_nav localization_launch.py
 
 ---
 
-## 📄 11. Licencia
+## 📄 10. Licencia
 
 MIT License.
 
