@@ -67,9 +67,10 @@ El objetivo es lograr navegación básica, lectura de LIDAR, visualización en R
 
 </div>
 
-### Sistema SLAM
+### Sistema SLAM y mapeo
 <div align="center">
 <img src="imgs/8.png" width="800"/>
+<img src="imgs/5.png" width="800"/>
 </div>
 
 SLAM Toolbox implementa graph-based SLAM generando mapas 2D en tiempo real. Procesa LiDAR a 5.5 Hz y odometría a 50 Hz con optimización de pose-graph y loop closure.
@@ -168,6 +169,51 @@ La PCB actúa como una capa de control de bajo nivel, encargándose del manejo d
 </div>
 
 
+## 📐 6. Cinemática del robot móvil
+
+El robot desarrollado corresponde a un robot móvil diferencial, cuya cinemática se modela a partir de la velocidad de sus dos ruedas motrices. Este modelo es fundamental para el control de movimiento, la estimación de pose y la integración con algoritmos de navegación y SLAM.
+
+Modelo cinemático
+
+Sea:
+
+vr: velocidad lineal de la rueda derecha
+
+vl: velocidad lineal de la rueda izquierda
+
+L: distancia entre las ruedas
+
+r: radio de las ruedas
+
+Las velocidades del robot en el plano se definen como:
+
+Velocidad lineal:
+
+v = (vr + vl) / 2
+
+Velocidad angular:
+
+ω = (vr - vl) / L
+
+A partir de estas, la evolución de la pose del robot (x, y, θ) se expresa como:
+
+x_dot = v · cos(θ) y_dot = v · sin(θ) θ_dot = ω
+
+Relación con el sistema
+
+Este modelo cinemático es utilizado para:
+
+Generar comandos de velocidad para los motores
+
+Interpretar mensajes /cmd_vel de ROS2
+
+Apoyar la estimación de odometría
+
+Integrarse con los módulos de SLAM y navegación
+
+El uso de una IMU en la PCB permite complementar este modelo, especialmente en la estimación del ángulo θ, mejorando la robustez frente a deslizamientos o errores de odometría.
+
+
 ## 🚀 5. Ejecución del launch principal
 
 ```
@@ -214,6 +260,31 @@ ros2 launch nav2_bringup navigation_launch.py
 ```
 
 ---
+
+🧩 14. Arquitectura de nodos y comunicación ROS 2
+
+<div align="center">
+<img src="imgs/12.JPG" width="800"/>
+</div>
+
+La siguiente arquitectura representa el flujo de información entre los nodos principales del sistema ROS 2, mostrando cómo se integran control, percepción, estado del robot y SLAM.
+Control de movimiento
+•	/teleop_twist_keyboard: nodo encargado de generar comandos de velocidad manuales.
+•	/cmd_vel: tópico que transporta los comandos de velocidad lineal y angular.
+•	/bridge: actúa como intermediario entre ROS 2 y la electrónica de bajo nivel (microcontrolador), traduciendo los mensajes de velocidad a señales físicas para los motores.
+Estado del robot
+•	/joint_states: tópico que publica el estado de las articulaciones (ruedas) del robot.
+•	/robot_state_publisher: utiliza los estados articulares y el modelo del robot para publicar la transformaciones TF.
+•	/robot_description: contiene el modelo URDF del robot, usado para visualización y cálculo de transformaciones.
+Percepción y SLAM
+•	/rplidar_node: nodo que controla el RPLIDAR y publica los datos de escaneo.
+•	/scan: tópico que contiene los datos de distancia del LIDAR.
+•	/slam_toolbox: procesa los datos del LIDAR junto con la información de movimiento para generar el mapa.
+•	/map: tópico donde se publica el mapa generado durante el proceso de SLAM.
+Transformaciones
+•	/transform_listener_impl_*: nodos internos encargados de escuchar y gestionar las transformaciones TF necesarias para la correcta relación entre marcos de referencia.
+Esta arquitectura permite una separación clara entre control, estado, percepción y mapeo, facilitando la depuración, escalabilidad y futura integración con módulos de navegación autónoma.
+
 
 ## 🧪 9. Pruebas realizadas
 
