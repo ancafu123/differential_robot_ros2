@@ -129,7 +129,7 @@ Ejemplo de ejecución del URDF:
 </table>
 </div>
 
-🧩 5. Diseño de la PCB
+## 🧩 5. Diseño de la PCB
 
 Se diseñó y fabricó una placa de circuito impreso (PCB) personalizada para el control del robot móvil, con el objetivo de integrar en un solo módulo el procesamiento, el control de motores y la medición de orientación.
 
