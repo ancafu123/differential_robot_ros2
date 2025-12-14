@@ -105,6 +105,16 @@ sudo apt install ros-humble-xacro
 
 ## 🛠️ 4. Diseño y URDF del robot
 
+El robot usa un modelo URDF que define:
+
+* Base del robot
+* Ruedas
+* Chasis
+* Sensor LIDAR
+* Coordenadas TF
+
+Ejemplo de ejecución del URDF:
+
 ---
 <div align="center">
 <table>
@@ -119,11 +129,48 @@ sudo apt install ros-humble-xacro
 </table>
 </div>
 
+🧩 5. Diseño de la PCB
 
-## 🚀 5. Ejecución del nodo RPLIDAR
+Se diseñó y fabricó una placa de circuito impreso (PCB) personalizada para el control del robot móvil, con el objetivo de integrar en un solo módulo el procesamiento, el control de motores y la medición de orientación.
+
+Componentes principales
+
+Raspberry Pi Pico W: utilizada como microcontrolador principal, encargada de la lectura de sensores, ejecución de la lógica de control y comunicación con el sistema superior (ROS2).
+
+DRV8833: driver de motores DC empleado para el control de dos motores del robot diferencial, permitiendo control de velocidad y sentido de giro mediante señales PWM.
+
+IMU: sensor inercial utilizado para obtener información de orientación y movimiento (aceleración y/o velocidad angular), útil para tareas de estimación de estado y navegación.
+
+Características de la PCB
+
+Integración compacta de control, potencia y sensado
+
+Reducción de cableado y conexiones externas
+
+Diseño orientado a sistemas embebidos y robótica móvil
+
+Preparada para montaje directo en el chasis del robot
+
+Aplicación en el sistema
+
+La PCB actúa como una capa de control de bajo nivel, encargándose del manejo directo de motores y sensores, mientras que la Raspberry Pi principal ejecuta los nodos de ROS2 para percepción, SLAM y navegación.
+
+<div align="center">
+<table>
+  <tr>
+    <td><img src="imgs/9.png" width="400"/></td>
+    <td><img src="imgs/7.png" width="400"/></td>
+  </tr>
+</table>
+</div>
+
+
+## 🚀 5. Ejecución del launch principal
 
 ```
-ros2 launch rplidar_ros rplidar.launch.py
+colcon build
+source install/setup.bash
+ros2 launch my_robot view.launch.py
 ```
 
 Comprobación directa:
@@ -146,29 +193,6 @@ Agregar:
 * TF
 * Odometry
 * RobotModel
-
-### Errores comunes (y soluciones)
-
-Se incluyen en el apartado final del documento.
-
----
-
-## 🤖 7. URDF del robot
-
-El robot usa un modelo URDF que define:
-
-* Base del robot
-* Ruedas
-* Chasis
-* Sensor LIDAR
-* Cámara
-* Coordenadas TF
-
-Ejemplo de ejecución del URDF:
-
-```
-ros2 launch robot_description display.launch.py
-```
 
 ---
 
@@ -219,18 +243,6 @@ source install/setup.bash
 ros2 launch robot_nav slam_launch.py
 ros2 launch robot_nav localization_launch.py
 ```
-
-## 👤 Autor
-
-**Alejandro Rubio Salas**
-
-Semillero de Investigación SICORA
-
-Universidad Nacional de Colombia – Sede La Paz
-
-## 📌 Licencia
-
-Uso libre para fines académicos y de investigación.
 
 ## 🧪 10. Pruebas realizadas
 
