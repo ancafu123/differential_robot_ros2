@@ -188,28 +188,49 @@ ros2 launch nav2_bringup navigation_launch.py
 
 ---
 
-## 🧰 9. Solución de errores frecuentes
+## 🔧 9. Instalación y Uso
 
-### ❌ RPLIDAR: exit code -6
+#### Instalación de dependencias principales
 
-Causas:
+```md
+sudo apt install -y \
+ros-humble-slam-toolbox \
+ros-humble-amcl \
+ros-humble-nav2-bringup \
+ros-humble-rplidar-ros \
+ros-humble-teleop-twist-keyboard \
+ros-humble-xacro \
+ros-humble-rviz2
+```
 
-* Puerto incorrecto
-* Permisos insuficientes
-* Baudrate incorrecto
-* Driver USB ocupado
+### 1️⃣ Clonar el repositorio
+```md
+git clone https://github.com/Rubiores/MyWork_UbuntuRos2.git
+```
+### 2️⃣ Compilar el workspace
+```md
+cd ~/MyWork_UbuntuRos2
+colcon build
+source install/setup.bash
+```
+### 3️⃣ Ejecutar SLAM o Localización
 
-### ❌ RViz: `QXcbConnection XCB error`
+```md
+ros2 launch robot_nav slam_launch.py
+ros2 launch robot_nav localization_launch.py
+```
 
-Causas:
+## 👤 Autor
 
-* Problemas con GPU
-* Ejecutar en Wayland en vez de Xorg
-* SSH sin aceleración gráfica
+**Alejandro Rubio Salas**
 
-Solución recomendada: usar **Ubuntu on Xorg**.
+Semillero de Investigación SICORA
 
----
+Universidad Nacional de Colombia – Sede La Paz
+
+## 📌 Licencia
+
+Uso libre para fines académicos y de investigación.
 
 ## 🧪 10. Pruebas realizadas
 
