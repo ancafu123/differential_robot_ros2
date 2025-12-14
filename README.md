@@ -269,20 +269,20 @@ ros2 launch nav2_bringup navigation_launch.py
 
 La siguiente arquitectura representa el flujo de información entre los nodos principales del sistema ROS 2, mostrando cómo se integran control, percepción, estado del robot y SLAM.
 Control de movimiento
-•	/teleop_twist_keyboard: nodo encargado de generar comandos de velocidad manuales.
-•	/cmd_vel: tópico que transporta los comandos de velocidad lineal y angular.
-•	/bridge: actúa como intermediario entre ROS 2 y la electrónica de bajo nivel (microcontrolador), traduciendo los mensajes de velocidad a señales físicas para los motores.
+*/teleop_twist_keyboard: nodo encargado de generar comandos de velocidad manuales.
+*	/cmd_vel: tópico que transporta los comandos de velocidad lineal y angular.
+*	/bridge: actúa como intermediario entre ROS 2 y la electrónica de bajo nivel (microcontrolador), traduciendo los mensajes de velocidad a señales físicas para los motores.
 Estado del robot
-•	/joint_states: tópico que publica el estado de las articulaciones (ruedas) del robot.
-•	/robot_state_publisher: utiliza los estados articulares y el modelo del robot para publicar la transformaciones TF.
-•	/robot_description: contiene el modelo URDF del robot, usado para visualización y cálculo de transformaciones.
+*	/joint_states: tópico que publica el estado de las articulaciones (ruedas) del robot.
+*	/robot_state_publisher: utiliza los estados articulares y el modelo del robot para publicar la transformaciones TF.
+*	/robot_description: contiene el modelo URDF del robot, usado para visualización y cálculo de transformaciones.
 Percepción y SLAM
-•	/rplidar_node: nodo que controla el RPLIDAR y publica los datos de escaneo.
-•	/scan: tópico que contiene los datos de distancia del LIDAR.
-•	/slam_toolbox: procesa los datos del LIDAR junto con la información de movimiento para generar el mapa.
-•	/map: tópico donde se publica el mapa generado durante el proceso de SLAM.
+*	/rplidar_node: nodo que controla el RPLIDAR y publica los datos de escaneo.
+*	/scan: tópico que contiene los datos de distancia del LIDAR.
+*	/slam_toolbox: procesa los datos del LIDAR junto con la información de movimiento para generar el mapa.
+*	/map: tópico donde se publica el mapa generado durante el proceso de SLAM.
 Transformaciones
-•	/transform_listener_impl_*: nodos internos encargados de escuchar y gestionar las transformaciones TF necesarias para la correcta relación entre marcos de referencia.
+*	/transform_listener_impl_*: nodos internos encargados de escuchar y gestionar las transformaciones TF necesarias para la correcta relación entre marcos de referencia.
 Esta arquitectura permite una separación clara entre control, estado, percepción y mapeo, facilitando la depuración, escalabilidad y futura integración con módulos de navegación autónoma.
 
 
