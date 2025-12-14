@@ -235,17 +235,23 @@ ros2 run rplidar_ros rplidar_node
 ```
 rviz2
 ```
-
-Agregar:
-
 * LaserScan
 * TF
 * Odometry
 * RobotModel
 
+
+<div align="center">
+<table>
+  <tr>
+    <td><img src="imgs/6.png" width="400"/></td>
+  </tr>
+</table>
+</div>
+
 ---
 
-## 🧭 8. Navegación y SLAM (Nav2)
+## 🧭 7. Navegación y SLAM (Nav2)
 
 Para usar SLAM Toolbox:
 
@@ -261,7 +267,7 @@ ros2 launch nav2_bringup navigation_launch.py
 
 ---
 
-🧩 14. Arquitectura de nodos y comunicación ROS 2
+## 🧩 8. Arquitectura de nodos y comunicación ROS 2
 
 <div align="center">
 <img src="imgs/12.JPG" width="800"/>
