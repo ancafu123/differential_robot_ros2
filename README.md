@@ -214,7 +214,7 @@ Integrarse con los módulos de SLAM y navegación
 El uso de una IMU en la PCB permite complementar este modelo, especialmente en la estimación del ángulo θ, mejorando la robustez frente a deslizamientos o errores de odometría.
 
 
-## 🚀 5. Ejecución del launch principal
+## 🚀 7. Ejecución del launch principal
 
 ```
 colcon build
@@ -230,7 +230,7 @@ ros2 run rplidar_ros rplidar_node
 
 ---
 
-## 🛰️ 6. Visualización en RViz2
+## 🛰️ 8. Visualización en RViz2
 
 ```
 rviz2
@@ -251,7 +251,7 @@ rviz2
 
 ---
 
-## 🧭 7. Navegación y SLAM (Nav2)
+## 🧭 9. Navegación y SLAM (Nav2)
 
 Para usar SLAM Toolbox:
 
@@ -267,7 +267,7 @@ ros2 launch nav2_bringup navigation_launch.py
 
 ---
 
-## 🧩 8. Arquitectura de nodos y comunicación ROS 2
+## 🧩 10. Arquitectura de nodos y comunicación ROS 2
 
 <div align="center">
 <img src="imgs/12.JPG" width="800"/>
@@ -292,7 +292,7 @@ Transformaciones
 Esta arquitectura permite una separación clara entre control, estado, percepción y mapeo, facilitando la depuración, escalabilidad y futura integración con módulos de navegación autónoma.
 
 
-## 🧪 9. Pruebas realizadas
+## 🧪 11. Pruebas realizadas
 
 * Prueba de lectura continua del LIDAR
 * Publicación de /scan en ROS2
@@ -302,7 +302,7 @@ Esta arquitectura permite una separación clara entre control, estado, percepci�
 
 ---
 
-## 📄 10. Licencia
+## 📄 12. Licencia
 
 MIT License.
 
